@@ -6,6 +6,7 @@ namespace Project_1
 {
     class AplicationForCredit
     {
+        public int bal;
         Points ball = new Points();
         const string connectionString = @"Data source=NILUFARSHEROVA; Initial catalog=ProjectAlifDB; Integrated Security = True";
         public void Application()
@@ -248,6 +249,7 @@ namespace Project_1
               }
               break;
           }
+          bal = ball.Point;
         }
     }
 }

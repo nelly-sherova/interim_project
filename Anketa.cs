@@ -6,6 +6,7 @@ namespace Project_1
 {
     class Anketa
     {
+        public int bal;
         Points ball = new Points();
         const string connectionString = @"Data source=NILUFARSHEROVA; Initial catalog=ProjectAlifDB; Integrated Security = True";
         public void Anketaa()
@@ -13,7 +14,7 @@ namespace Project_1
             int age, sempol;
             string sempoll=" ", firstName, lastName, middleName;
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Добро пожаловать в поле регистрации для оформления кредита!! :)");
+            Console.WriteLine("Добро пожаловать в поле анкеты для оформления кредита!! :)");
             Console.ForegroundColor = ConsoleColor.White;
             string AdminKey = "ad0010", key;
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -169,6 +170,7 @@ namespace Project_1
                 }
                 break; 
             }
+        bal = ball.Point;
         }
     }
 }
