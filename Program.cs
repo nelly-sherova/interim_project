@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Project_1
 {
@@ -6,7 +8,8 @@ namespace Project_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Registration polz = new Registration();
+            polz.Reg();
         }
     }
 }

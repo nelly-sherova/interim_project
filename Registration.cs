@@ -1,12 +1,13 @@
 using System;
-//using System.Data;
-//using System.Data.SqlClient;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Project_1
 {
-    static class Registration
+    class Registration
     {
-        public static void Reg()
+        const string connectionString = @"Data source=NILUFARSHEROVA; Initial catalog=ProjectAlifDB; Integrated Security = True";
+        public void Reg()
         {
           Console.ForegroundColor = ConsoleColor.Green;
           Console.WriteLine("Добро пожаловать в поле регистрации для оформления кредита!! :)");
@@ -91,6 +92,14 @@ namespace Project_1
                                     Console.Write("Серия паспорта: ");
                                     Console.ForegroundColor = ConsoleColor.White;
                                     seriya = Console.ReadLine();
+                                    string sqlExpression = $"INSERT INTO Registration ([FirstName],[LastName], [MiddleName], [numbetOfTel], [birthDate], [pol], [citizenship], [dateOfIssue], [dateOfExpiry], [address], [issuingAuthority], [seriya]) VALUES ( '{firstName}', '{lastName}', '{middleName}', '{numbetOfTel}', '{birthDate}','{pol}', '{citizenship}','{dateOfIssue}', '{dateOfExpiry}', '{address}', '{issuingAuthority}', '{seriya}')";
+                                    using (SqlConnection connection = new SqlConnection(connectionString))
+                                    {
+                                        connection.Open();
+                                        SqlCommand command = new SqlCommand(sqlExpression, connection);
+                                        int number = command.ExecuteNonQuery();
+                                        Console.WriteLine("Добавлено объектов: {0}", number);
+                                    }
                                     break;
 
                                 //default:
@@ -102,30 +111,6 @@ namespace Project_1
                   break;
               }
           }
-         
-
-
-
-
-
-
-
-
-
-
-
-
-          /*string sqlExpression = $"INSERT INTO ___ ([FirstName],[LastName], [MiddleName]) VALUES ( '{firstName}', '{LN}', '{MN}' , '{Birthdate}')";
-                        using (SqlConnection connection = new SqlConnection(connectionString))
-                        {
-                            connection.Open();
-                            SqlCommand command = new SqlCommand(sqlExpression, connection);
-                            int number = command.ExecuteNonQuery();
-                            Console.WriteLine("Добавлено объектов: {0}", number);
-                            Console.Write("Select a command = ");
-                            Console.WriteLine("Insert -> 1 \nSelect All -> 2 \nSelect by Id ->4 \nUpdate - > 5 \nDelete -> 3 \nExit ->0");
-                            counter = Convert.ToInt32(Console.ReadLine());
-                        }*/
         }
     }
 }
