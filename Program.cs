@@ -10,8 +10,9 @@ namespace Project_1
         {
             /*Registration polz = new Registration();
             polz.Reg();*/
-            Anketa a = new Anketa();
-            a.Anketaa();
+            //Anketa a = new Anketa();
+           AplicationForCredit a = new AplicationForCredit();
+            a.Application();
 
         }
     }
