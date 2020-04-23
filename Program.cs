@@ -8,8 +8,11 @@ namespace Project_1
     {
         static void Main(string[] args)
         {
-            Registration polz = new Registration();
-            polz.Reg();
+            /*Registration polz = new Registration();
+            polz.Reg();*/
+            Anketa a = new Anketa();
+            a.Anketaa();
+
         }
     }
 }
