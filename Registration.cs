@@ -6,6 +6,7 @@ namespace Project_1
 {
     class Registration
     {
+        Points ball = new Points();
         const string connectionString = @"Data source=NILUFARSHEROVA; Initial catalog=ProjectAlifDB; Integrated Security = True";
         public void Reg()
         {
@@ -30,7 +31,7 @@ namespace Project_1
                         bool AdminWorking = true;
                         while (AdminWorking)
                         {
-                            Console.WriteLine("Выберете действие: \n1--> Регистрация клиента, \n2-->Просмотр истории заявок");
+                            Console.WriteLine("Выберете действие: \n1--> Регистрация клиента, \n2-->Просмотр истории заявок на регистрацию");
                             int indexAdmin = Convert.ToInt32(Console.ReadLine());
                             switch (indexAdmin)
                             {
@@ -68,10 +69,13 @@ namespace Project_1
                                     Console.Write("Пол: (жен, муж)");
                                     Console.ForegroundColor = ConsoleColor.White;
                                     pol = Console.ReadLine();
+                                    if (pol == "жен") ball.Point = ball.Point+2;
+                                    if (pol == "муж") ball.Point = ball.Point+1;
                                     Console.ForegroundColor = ConsoleColor.Yellow;
                                     Console.Write("Гражданство: (tjk - Таджикистан)");
                                     Console.ForegroundColor = ConsoleColor.White;
                                     citizenship = Console.ReadLine();
+                                    if (citizenship == "tjk") ball.Point = ball.Point+1;
                                     Console.ForegroundColor = ConsoleColor.Yellow;
                                     Console.Write("Дата выдачи паспорта: (dd.mm.yyyy)");
                                     Console.ForegroundColor = ConsoleColor.White;
@@ -101,7 +105,8 @@ namespace Project_1
                                         Console.WriteLine("Добавлено объектов: {0}", number);
                                     }
                                     break;
-
+                                    case 2:
+                                        Console.Write("История регистраций: ");  
                                 //default:
                             }
                             
