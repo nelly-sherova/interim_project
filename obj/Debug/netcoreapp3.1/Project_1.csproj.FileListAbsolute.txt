@@ -1,0 +1,13 @@
+C:\Users\ASUS\Desktop\Project_1\obj\Debug\netcoreapp3.1\Project_1.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Project_1\obj\Debug\netcoreapp3.1\Project_1.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Project_1\obj\Debug\netcoreapp3.1\Project_1.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\Project_1\obj\Debug\netcoreapp3.1\Project_1.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\Project_1\bin\Debug\netcoreapp3.1\Project_1.exe
+C:\Users\ASUS\Desktop\Project_1\bin\Debug\netcoreapp3.1\Project_1.deps.json
+C:\Users\ASUS\Desktop\Project_1\bin\Debug\netcoreapp3.1\Project_1.runtimeconfig.json
+C:\Users\ASUS\Desktop\Project_1\bin\Debug\netcoreapp3.1\Project_1.runtimeconfig.dev.json
+C:\Users\ASUS\Desktop\Project_1\bin\Debug\netcoreapp3.1\Project_1.dll
+C:\Users\ASUS\Desktop\Project_1\bin\Debug\netcoreapp3.1\Project_1.pdb
+C:\Users\ASUS\Desktop\Project_1\obj\Debug\netcoreapp3.1\Project_1.dll
+C:\Users\ASUS\Desktop\Project_1\obj\Debug\netcoreapp3.1\Project_1.pdb
+C:\Users\ASUS\Desktop\Project_1\obj\Debug\netcoreapp3.1\Project_1.genruntimeconfig.cache
