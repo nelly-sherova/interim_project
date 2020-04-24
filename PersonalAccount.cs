@@ -70,6 +70,20 @@ namespace Project_1
               Console.WriteLine($"ID: {reader2.GetValue(0)}, Имя:{reader2.GetValue(1)} | Фамилия: {reader2.GetValue(2)} | Отчество: {reader2.GetValue(3)} | Сумма кредита: {reader2.GetValue(4)} | Доход:  {reader2.GetValue(5)}| Кредитная история (закрытые кредиты): {reader2.GetValue(6)} | Просрочка в кредитной истории {reader2.GetValue(7)} | Цель кредита: {reader2.GetValue(8)} ");
           }
       }
+      Console.ForegroundColor = ConsoleColor.Green;
+      Console.WriteLine("Поле ответа: ");
+      Console.ForegroundColor = ConsoleColor.White;
+      string  sqlExpression14 = $"Select * from Answer where Answer.middleName = '{middleName}'";
+      using (SqlConnection connection11 = new SqlConnection(connectionString))
+      {
+          connection11.Open();
+          SqlCommand command11 = new SqlCommand(sqlExpression14, connection11);
+          var reader21 = command11.ExecuteReader();
+          while (reader21.Read())
+          {
+              Console.WriteLine($"ID: {reader21.GetValue(0)}, | ответ  {reader21.GetValue(1)} | имя: {reader21.GetValue(2)} | фамилия: {reader21.GetValue(3)} | отчество: {reader21.GetValue(4)}");
+          }
+      }
     }
     
   }

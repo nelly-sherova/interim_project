@@ -6,7 +6,7 @@ namespace Project_1
 {
   class Answer
   {
-    public int bal;
+    //public int bal;
     Registration polz = new Registration();
     
   }
