@@ -12,7 +12,7 @@ namespace Project_1
             int bol=0;
             bool working = true;
             string otvet = " ";
-            while (working)
+            /*while (working)
             {
                 Registration polz = new Registration();
                 polz.Reg(); 
@@ -40,9 +40,10 @@ namespace Project_1
                 Console.WriteLine("Добавлено объектов: {0}", number);
                 }
 
-            }
+            }*/
  
-
+            PersonalAccount a1 = new PersonalAccount();
+            a1.PAccount();
         }
     }
 }

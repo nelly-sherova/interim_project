@@ -86,6 +86,12 @@ namespace Project_1
          }
          
       }
+      else
+      {
+          Console.ForegroundColor = ConsoleColor.Red;
+          Console.Write("Неправильный пароль!");
+          Console.ForegroundColor = ConsoleColor.White;
+      }
      
 
     }
