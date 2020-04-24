@@ -254,7 +254,7 @@ namespace Project_1
                srok = srokk;
                ball.Point = ball.Point +1; 
                Console.ForegroundColor = ConsoleColor.White;
-              string sqlExpression1 = $"INSERT INTO AplicationForCredit ([firstName],[lastName], [middleName], [sumOfCredit], [dohod], [Credithistory], [CredithistoryPast], [cel],[srok]) VALUES ( '{firstName}', '{lastName}', '{middleName}', '2{sumOfCredit}', '{dohod}', '{creditHistoryClose}', '{prosrochkastring}', '{selstring}', '{srok}')";
+              string sqlExpression1 = $"INSERT INTO AplicationForCredit ([firstName],[lastName], [middleName], [sumOfCredit], [dohod], [Credithistory], [CredithistoryPast], [cel],[srok]) VALUES ( '{firstName}', '{lastName}', '{middleName}', '{sumOfCredit}', '{dohod}', '{creditHistoryClose}', '{prosrochkastring}', '{selstring}', '{srok}')";
               using (SqlConnection connection = new SqlConnection(connectionString))
               {
                   connection.Open();
