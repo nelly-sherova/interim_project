@@ -6,12 +6,14 @@ namespace Project_1
 {
     class AplicationForCredit
     {
-        public int bal;
+        public double sum;
+        public int bal, srok;
         Points ball = new Points();
         const string connectionString = @"Data source=NILUFARSHEROVA; Initial catalog=ProjectAlifDB; Integrated Security = True";
         public void Application()
         {
             double sumOfCredit, dohod, x ;
+            int srokk;
             string firstName, lastName, middleName, creditHistoryClose = " ", prosrochkastring = " ", selstring = " "; 
             int creditHistoryCl, prosrochkaint, selint;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -50,6 +52,7 @@ namespace Project_1
                                 Console.Write("Сумма кредита: ");
                                 Console.ForegroundColor = ConsoleColor.White;
                                 sumOfCredit = Convert.ToDouble(Console.ReadLine());
+                                sum = sumOfCredit;
                                 Console.ForegroundColor = ConsoleColor.Yellow;
                                 Console.Write("Доход: ");
                                 Console.ForegroundColor = ConsoleColor.White;
@@ -119,8 +122,14 @@ namespace Project_1
                                   ball.Point = ball.Point - 1;
                                   selstring = "Прочее";
                                 }
+                                Console.ForegroundColor = ConsoleColor.Yellow;
+                                Console.Write("Срок: ");
                                 Console.ForegroundColor = ConsoleColor.White;
-                                string sqlExpression3 = $"INSERT INTO AplicationForCredit ([firstName],[lastName], [middleName], [sumOfCredit], [dohod], [Credithistory], [CredithistoryPast], [cel]) VALUES ( '{firstName}', '{lastName}', '{middleName}', '2{sumOfCredit}', '{dohod}', '{creditHistoryClose}', '{prosrochkastring}', '{selstring}')";
+                                srokk = Convert.ToInt32(Console.ReadLine());
+                                srok = srokk;
+                                ball.Point = ball.Point +1; 
+                                Console.ForegroundColor = ConsoleColor.White;
+                                string sqlExpression3 = $"INSERT INTO AplicationForCredit ([firstName],[lastName], [middleName], [sumOfCredit], [dohod], [Credithistory], [CredithistoryPast], [cel], [srok]) VALUES ( '{firstName}', '{lastName}', '{middleName}', '2{sumOfCredit}', '{dohod}', '{creditHistoryClose}', '{prosrochkastring}', '{selstring}', '{srok}')";
                                 using (SqlConnection connection = new SqlConnection(connectionString))
                                 {
                                     connection.Open();

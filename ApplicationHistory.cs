@@ -59,7 +59,7 @@ namespace Project_1
                         connection1.Open();
                         SqlCommand command1 = new SqlCommand(sqlExpression4, connection1);
                         SqlDataReader reader  = command1.ExecuteReader();
-                        while (reader.Read()) Console.WriteLine($"ID: {reader.GetValue(0)}, Имя:{reader.GetValue(1)} | Фамилия: {reader.GetValue(2)} | Отчество: {reader.GetValue(3)} | Сумма кредита: {reader.GetValue(4)} | Доход:  {reader.GetValue(5)}| Кредитная история (закрытые кредиты): {reader.GetValue(6)} | Просрочка в кредитной истории {reader.GetValue(7)} | Цель кредита: {reader.GetValue(8)} ");
+                        while (reader.Read()) Console.WriteLine($"ID: {reader.GetValue(0)}, Имя:{reader.GetValue(1)} | Фамилия: {reader.GetValue(2)} | Отчество: {reader.GetValue(3)} | Сумма кредита: {reader.GetValue(4)} | Доход:  {reader.GetValue(5)}| Кредитная история (закрытые кредиты): {reader.GetValue(6)} | Просрочка в кредитной истории {reader.GetValue(7)} | Цель кредита: {reader.GetValue(8)} | Срок: {reader.GetValue(9)}");
                     }
                  break;
                  case  4:

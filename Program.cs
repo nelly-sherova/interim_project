@@ -6,6 +6,7 @@ namespace Project_1
 {
     class Program
     {
+        //double summ, pro, st, srokkk;
         const string connectionString = @"Data source=NILUFARSHEROVA; Initial catalog=ProjectAlifDB; Integrated Security = True";
         static void Main(string[] args)
         {
@@ -34,6 +35,8 @@ namespace Project_1
                                 an.Anketaa();
                                 AplicationForCredit a = new AplicationForCredit();
                                 a.Application();
+                                //summ = a.sum;
+                                //srokkk = a.srok;
                                 Console.ForegroundColor = ConsoleColor.Yellow;
                                 Console.Write("Имя : ");
                                 Console.ForegroundColor = ConsoleColor.White;
@@ -51,6 +54,10 @@ namespace Project_1
                                 {
                                     Console.WriteLine("Поздравляю, ваш кредит одобрен");
                                     otvet = "Одобрено!";
+                                    /*pro = 13*summ/100;
+                                    st = 13*summ/100 + srokkk;
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.WriteLine($"График покашения: по {st} сомони в месяй, в течении {srokkk} месяцев");*/
                                 }
                                 else
                                 {
