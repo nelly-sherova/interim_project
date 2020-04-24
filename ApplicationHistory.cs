@@ -72,7 +72,7 @@ namespace Project_1
                         connection1.Open();
                         SqlCommand command1 = new SqlCommand(sqlExpression3, connection1);
                         SqlDataReader reader  = command1.ExecuteReader();
-                        while (reader.Read()) Console.WriteLine($"ID: {reader.GetValue(0)}, | ответ  {reader.GetValue(1)}");
+                        while (reader.Read()) Console.WriteLine($"ID: {reader.GetValue(0)}, | ответ  {reader.GetValue(1)} | имя: {reader.GetValue(2)} | фамилия: {reader.GetValue(3)} | отчество: {reader.GetValue(4)}");
                     }
                  break;
                  case 5:

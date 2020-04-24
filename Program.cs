@@ -11,8 +11,9 @@ namespace Project_1
         {
             int bol=0;
             bool working = true;
-            string otvet = " ";
-            /*while (working)
+            string otvet = " ", firstName, lastName, middleName;
+            
+            while (working)
             {
                 Registration polz = new Registration();
                 polz.Reg(); 
@@ -31,7 +32,19 @@ namespace Project_1
                     Console.Write("Отказано!");
                     otvet = "Отказано!";
                 }
-                string sqlExpression = $"INSERT INTO Answer ([otvet]) VALUES ( '{otvet}')";
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("Имя : ");
+                Console.ForegroundColor = ConsoleColor.White;
+                firstName = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("Фамилия: ");
+                Console.ForegroundColor = ConsoleColor.White;
+                lastName = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("Отчество: ");
+                Console.ForegroundColor = ConsoleColor.White;
+                middleName = Console.ReadLine();
+                string sqlExpression = $"INSERT INTO Answer ([otvet], [firstName], [lastName], [middleName]) VALUES ( '{otvet}', '{firstName}', '{lastName}', '{middleName}')";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                 connection.Open();
@@ -40,7 +53,7 @@ namespace Project_1
                 Console.WriteLine("Добавлено объектов: {0}", number);
                 }
 
-            }*/
+            }
  
             PersonalAccount a1 = new PersonalAccount();
             a1.PAccount();
